@@ -1,0 +1,31 @@
+// Asset Import
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+// Fonts.
+$font-major: "Poppins", sans-serif;
+$font-minor: "Roboto", sans-serif;
+
+// Font Sizes.
+$fs-1: 6rem;
+$fs-2: 4rem;
+$fs-3: 3rem;
+$fs-4: 2rem;
+$fs-5: 1.8rem;
+$fs-6: 1.5rem;
+$fs-7: 1.2rem;
+$fs-8: 1rem;
+$fs-9: 0.9rem;
+$fs-10: 0.7rem;
+
+// Colors.
+$color-primary: #264544;
+$primary-color-light: #466564;
+$color-light: whitesmoke;
+$color-dark: #000d0c;
+
+// Breakpoints.
+$breakpoint-large: 1920px;
+$breakpoint-medium: 1440px;
+$breakpoint-small: 1280px;
+$breakpoint-tablet: 1024px;
+$breakpoint-mobile: 481px;
