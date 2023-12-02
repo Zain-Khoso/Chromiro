@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: whitesmoke;
+  overflow-y: auto;
+}
+body .page {
+  width: 100%;
+  height: 100%;
+}
+body .page .form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 90%;
+  aspect-ratio: 1/1.5;
+  padding: 1rem;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.3rem rgba(38, 69, 68, 0.6);
+}
+body .page .form .heading {
+  font-size: 3rem;
+  font-family: "Poppins", sans-serif;
+  color: #264544;
+  border-bottom: 2px solid #264544;
+}
+body .page .form .contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  width: 80%;
+  border-bottom: 3px solid rgba(38, 69, 68, 0.6);
+  border-radius: 0.3rem;
+  transition: all 200ms;
+}
+body .page .form .contact .svg-wrapper {
+  width: 2rem;
+  aspect-ratio: 1/1;
+}
+body .page .form .contact .svg-wrapper svg {
+  stroke: rgba(38, 69, 68, 0.6);
+  transition: all 200ms;
+}
+body .page .form .contact .entry {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+}
+body .page .form .contact .entry::placeholder {
+  font-weight: 400;
+  color: rgba(38, 69, 68, 0.6);
+}
+body .page .form .contact:focus-within {
+  border-color: 3px solid #264544;
+}
+body .page .form .contact:focus-within .svg-wrapper svg {
+  stroke: #264544;
+}
+body .page .form .message {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 80%;
+  border-bottom: 3px solid rgba(38, 69, 68, 0.6);
+  border-radius: 0.3rem;
+  transition: all 200ms;
+}
+body .page .form .message .svg-wrapper {
+  width: 2rem;
+  aspect-ratio: 1/1;
+}
+body .page .form .message .svg-wrapper svg {
+  stroke: rgba(38, 69, 68, 0.6);
+  transition: all 200ms;
+}
+body .page .form .message .entry {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-align: left;
+  resize: none;
+}
+body .page .form .message .entry::placeholder {
+  font-weight: 400;
+  color: rgba(38, 69, 68, 0.6);
+}
+body .page .form .message:focus-within {
+  border-color: 3px solid #264544;
+}
+body .page .form .message:focus-within .svg-wrapper svg {
+  stroke: #264544;
+}
+body .page .form .btn {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: whitesmoke;
+  background-color: rgba(38, 69, 68, 0.8);
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+}
+body .page .form .btn:focus {
+  background-color: #264544;
+}
+
+/*# sourceMappingURL=contact-us.css.map */
