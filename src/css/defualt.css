@@ -4,7 +4,7 @@
   width: fit-content;
   height: fit-content;
   background-color: transparent;
-  color: #000d0c;
+  color: #1b1b1b;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -14,7 +14,7 @@
   border: none;
   outline: none;
   margin: 0px;
-  overflow: hidden;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -40,7 +40,7 @@ svg {
 
 ::-webkit-scrollbar-track,
 ::-moz-scrollbar-track {
-  background: #000d0c;
+  background: #1b1b1b;
 }
 
 ::-webkit-scrollbar-thumb,
@@ -53,4 +53,4 @@ svg {
   background: #1d3534;
 }
 
-/*# sourceMappingURL=default.css.map */
+/*# sourceMappingURL=defualt.css.map */
