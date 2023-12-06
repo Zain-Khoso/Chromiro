@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+nav {
+  width: 95vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo img {
+  width: 6rem;
+  aspect-ratio: 1/1;
+}
+nav .links ul {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+nav .links ul li {
+  list-style-type: none;
+}
+nav .links ul li a {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  color: #3d3d3d;
+  text-decoration: none;
+}
+nav .links ul li a::after {
+  content: "";
+  display: grid;
+  width: 0%;
+  height: 1px;
+  background: #000;
+  transition: 0.5s;
+}
+nav .links ul li a:hover {
+  color: #1b1b1b;
+}
+nav .links ul li a:hover::after {
+  width: 100%;
+}
+nav .links ul li .active {
+  color: #1b1b1b;
+}
+nav .links ul li .active::after {
+  width: 100%;
+}
+
+.toggle-nav {
+  display: none;
+}
+
+.toggle-nav {
+  display: flex;
+  height: 50%;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  align-content: center;
+}
+.toggle-nav button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  background: none;
+  border: none;
+  transform: 0.4s;
+}
+.toggle-nav button .row-1 {
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+}
+.toggle-nav button .row-2 {
+  transform: rotate(0deg);
+  transform-origin: 50% 50%;
+}
+.toggle-nav button hr {
+  background: #000;
+  height: 2px;
+  margin: 3px 0;
+  transition: transform 0.4s ease;
+  border: none;
+}
+.toggle-nav button:focus hr {
+  margin: 0;
+  padding: 0;
+}
+.toggle-nav button:focus .row-1 {
+  transform: rotate(45deg);
+  transform-origin: 50% 50%;
+}
+.toggle-nav button:focus .row-2 {
+  transform: rotate(-45deg);
+  transform-origin: 50% 50%;
+}
+.toggle-nav .b-nav-row {
+  width: 100%;
+}
+
+.show-on-mob {
+  display: none;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (max-width: 1024px) {
+  .hide-on-mob {
+    display: none;
+  }
+  .show-on-mob {
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

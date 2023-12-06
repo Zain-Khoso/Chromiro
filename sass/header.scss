@@ -1,0 +1,124 @@
+@import "config";
+nav{
+    width: 95vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        img{
+            width: 6rem;
+            aspect-ratio: 1/1;
+        }
+    }
+    .links{
+        ul{
+            height: 50%;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+            li{
+                list-style-type: none;
+                a{
+                    font-family: $font-minor;
+                    font-size: $fs-7;
+                    color: $color-semi-dark;
+                    text-decoration: none;
+                    &::after{
+                        content: "";
+                        display: grid;
+                        width: 0%;
+                        height: 1px;
+                        background: #000;
+                        transition: .5s;
+                    }
+                    &:hover{
+                        color: $color-dark;
+                        &::after{
+                            width: 100%;
+                        }
+                    }
+                }
+                .active{
+                    color: $color-dark;
+                    &::after{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.toggle-nav{
+    display: none;
+}
+.toggle-nav{
+    display: flex;
+    height: 50%;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    align-content: center;
+    
+    button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 3rem;
+        aspect-ratio: 1/1;
+        background: none;
+        border: none;
+        transform: .4s;
+        .row-1 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+        }
+          .row-2 {
+            transform: rotate(0deg);
+            transform-origin: 50% 50%;
+          }
+        hr{
+            background: #000;
+            height: 2px;
+            margin: 3px 0;
+            transition: transform 0.4s ease;
+            border: none;
+        }
+        &:focus{
+            hr{
+                margin: 0;
+                padding: 0;
+            }
+            .row-1 {
+                transform: rotate(45deg);
+                transform-origin: 50% 50%;
+              }
+              .row-2 {
+                transform: rotate(-45deg);
+                transform-origin: 50% 50%;
+              }
+        }
+    }
+    .b-nav-row{
+        width: 100%;
+        
+    }
+}
+.show-on-mob{
+    display: none;
+}
+//just for testing the nav remove after the nav is done
+.section{
+    height: 100vh;
+    width: 100vw;
+}
+
+@media (max-width: $breakpoint-tablet) {
+    .hide-on-mob{
+        display: none;
+    }
+    .show-on-mob{
+        display: flex;
+    }
+    
+}
