@@ -20,6 +20,7 @@ function updateImg(arr,elem){
 }
 setInterval(() => {
     (updateImg(m_banner_imgs,bImg))
-}, 5469);
+}, 5469
+);
 
 bImg.addEventListener(onmouseover,)
