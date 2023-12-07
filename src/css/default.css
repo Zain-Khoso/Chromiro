@@ -7,14 +7,14 @@
   color: #1b1b1b;
   font-size: 1rem;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   text-decoration: none;
-  padding: 0px;
+  padding: 0;
   border: none;
   outline: none;
-  margin: 0px;
-  overflow-x: hidden;
+  margin: 0;
+  overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -53,4 +53,4 @@ svg {
   background: #1d3534;
 }
 
-/*# sourceMappingURL=defualt.css.map */
+/*# sourceMappingURL=default.css.map */

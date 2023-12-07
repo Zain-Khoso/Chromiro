@@ -12,45 +12,49 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="/src/css/default.css" />
-        <link rel="stylesheet" href="/src/css/header.css" />
-        <!-- js -->
-        <script defer src="src/js/nav.js"></script>
+        <link rel="stylesheet" href="/src/css/index.css" />
+
+        <!-- JS -->
+        <script defer src="src/js/navbar.js"></script>
+
         <title>Home | Chromiro</title>
     </head>
     <body>
-        <nav>
-            <div class="logo">
-                <img src="assets/favicon.png" alt="">
-            </div>
-            <div class="links hide-on-mob">
-                <ul class="link-group">
-                    <li class="link"><a href="" class="nav-link active">Home</a></li>
+        <!-- Landing Page -->
+        <header class="landing-page">
+            <!-- Navbar -->
+            <nav class="navbar">
+                <a href="/">
+                    <div class="logo">
+                        <img src="assets/favicon.png" alt="" />
+                    </div>
+                </a>
 
-                    <li class="link"><a href="" class="nav-link">Themes</a></li>
+                <!-- ** Under development ** -->
+                <ul class="navigation">
+                    <li>
+                        <a href="#" class="nav-link active">Home</a>
+                    </li>
 
-                    <li class="link"><a href="" class="nav-link">About us</a></li>
+                    <li>
+                        <a href="#" class="nav-link">Themes</a>
+                    </li>
 
-                    <li class="link"><a href="" class="nav-link">Contact us</a></li>
-                    
+                    <li>
+                        <a href="#" class="nav-link">About us</a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="nav-link">Contact us</a>
+                    </li>
                 </ul>
-            </div>
 
-            <div class="toggle-nav show-on-mob ">
-                <button id="nav-tog-btn">
-                    <hr class="b-nav-row row-1">
-                    <hr class="b-nav-row row-2">
+                <button class="nav-toggler" id="nav-tog-btn">
+                    <hr class="nav-row" />
+                    <hr class="nav-row" />
+                    <hr class="nav-row" />
                 </button>
-            </div>
-        </nav>
-
-        <section class="section">
-            
-        </section>
-        <section class="section">
-
-        </section>
-        <section class="section">
-
-        </section>
+            </nav>
+        </header>
     </body>
 </html>

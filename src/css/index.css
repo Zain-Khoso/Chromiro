@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+body {
+  width: 100dvw;
+  height: 100dvh;
+  background-color: white;
+  overflow-y: auto;
+}
+body .landing-page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+body .landing-page .navbar {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100dvw;
+  height: 4rem;
+  padding: 0 0.5rem;
+}
+body .landing-page .navbar .logo {
+  width: 4rem;
+  aspect-ratio: 1/1;
+}
+body .landing-page .navbar .navigation {
+  display: none;
+}
+body .landing-page .nav-toggler {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 3rem;
+  aspect-ratio: 1/1;
+  transition: 0.4s ease-out;
+}
+body .landing-page .nav-toggler .nav-row {
+  width: 80%;
+  height: 10%;
+  background: #1b1b1b;
+  border-radius: 0.5rem;
+  transform-origin: 50% 50%;
+  transition: all 300ms ease;
+}
+body .landing-page .nav-toggler:focus .nav-row {
+  position: absolute;
+  top: 50%;
+  scale: 80%;
+}
+body .landing-page .nav-toggler:focus .nav-row:nth-child(1) {
+  transform: rotate(45deg);
+}
+body .landing-page .nav-toggler:focus .nav-row:nth-child(2) {
+  scale: 0%;
+  opacity: 0;
+}
+body .landing-page .nav-toggler:focus .nav-row:nth-child(3) {
+  transform: rotate(135deg);
+}
+
+@media screen and (min-width: 1024px) {
+  body .landing-page .navbar {
+    padding: 0 2rem;
+  }
+  body .landing-page .navbar .navigation {
+    display: flex;
+    gap: 2rem;
+  }
+  body .landing-page .nav-toggler {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

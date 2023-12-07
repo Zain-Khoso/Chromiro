@@ -20,7 +20,7 @@ $fs-10: 0.7rem;
 // Colors.
 $color-primary: #264544;
 $primary-color-light: #466564;
-$sec-color-light: #98e7c9;
+$color-secondary-light: #98e7c9;
 $color-light: #ffff;
 $color-dark: #1b1b1b;
 $color-semi-dark: #3d3d3d;
@@ -31,3 +31,6 @@ $breakpoint-medium: 1440px;
 $breakpoint-small: 1280px;
 $breakpoint-tablet: 1024px;
 $breakpoint-mobile: 481px;
+
+// Navbar Heights.
+$navbar-height-sm: 4rem;
