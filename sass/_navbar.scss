@@ -1,0 +1,110 @@
+
+@mixin navbar {
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+  *{
+    width:auto;
+    height: auto;
+    text-align: unset;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2em;
+    padding: .7rem 1rem;
+
+  }
+  .row {
+    display: flex;
+  }
+  .container {
+    max-width: 90%;
+    margin: 0px auto;
+  }
+  .logo {
+    align-items: center;
+    font-size: $fs-7;
+  }
+  .logo img {
+    max-width: 35px;
+  }
+  nav ul {
+    gap: 2em;
+    align-items: center;
+  }
+  nav a {
+    transition: 0.3s ease-in-out;
+  }
+  // end of navigation
+  
+  // mobile responsive
+  @media only screen and (max-width: 900px) {
+     // hamburger
+    .hamburger {
+      display: block;
+      cursor: pointer;
+      z-index: 1000;
+      margin-right: 9px;
+    }
+    .hamburger .line {
+      width: 25px;
+      height: 2px;
+      background-color: rgb(31, 148, 111);
+      margin: 3.6px 0px;
+      border-radius: 50px;
+    }
+
+    // logo branding
+    .logo {
+      margin-left: 9px;
+      z-index: 1000;
+      color: $color-dark;
+      transition: color 0.7s ease-in-out;
+    }
+    .logo h1{
+      margin-top: -3px;
+      font-family:'Montserrat', sans-serif;
+      color: #333;
+      font-weight: 800;
+      font-size: 22.4211px;
+      transition: color 0.8s ease-in-out;
+    }
+    .logo.active h1{
+      color: rgb(218, 218, 218) !important;
+    }
+    // navigation bar
+    .navigation {
+      position: absolute;
+      height: 0px;
+      top: 0px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background-color: $color-primary;
+      transition: height 0.4s ease-in-out;
+      border-bottom-left-radius: 25px; 
+      border-bottom-right-radius: 25px;
+    }
+    .navigation ul {
+      display: block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: 0.9s;
+      opacity: 0;
+    }
+    ul li {
+      margin-bottom: 10px;
+      transition: 0.9s;
+    }
+    ul li a {
+      color: white;
+    }
+    .navigation.active {
+      height: 450px;
+    }
+    .navigation.active ul {
+      opacity: 1;
+    }
+  }
+}
