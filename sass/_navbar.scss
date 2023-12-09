@@ -1,24 +1,18 @@
 
 @mixin navbar {
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-  *{
-    width:auto;
-    height: auto;
-    text-align: unset;
-  }
   nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2em;
-    padding: .7rem 1rem;
-
+    gap: 6em;
+    padding: .5rem 1rem;
   }
   .row {
     display: flex;
   }
   .container {
-    max-width: 90%;
+    max-width: 85%;
     margin: 0px auto;
   }
   .logo {
@@ -44,7 +38,6 @@
       display: block;
       cursor: pointer;
       z-index: 1000;
-      margin-right: 9px;
     }
     .hamburger .line {
       width: 25px;
@@ -53,15 +46,14 @@
       margin: 3.6px 0px;
       border-radius: 50px;
     }
-
     // logo branding
     .logo {
-      margin-left: 9px;
       z-index: 1000;
       color: $color-dark;
       transition: color 0.7s ease-in-out;
     }
     .logo h1{
+      margin-right:4px ;
       margin-top: -3px;
       font-family:'Montserrat', sans-serif;
       color: #333;
@@ -86,7 +78,8 @@
       border-bottom-right-radius: 25px;
     }
     .navigation ul {
-      display: block;
+      display: flex;
+      flex-direction: column;
       width: fit-content;
       margin: 80px auto 0 auto;
       text-align: center;
@@ -94,14 +87,31 @@
       opacity: 0;
     }
     ul li {
-      margin-bottom: 10px;
+      display: inline-block;
+      margin-bottom: -5px;
       transition: 0.9s;
+      text-align: center;
+      padding: 5px 15px;
+      border-bottom:2px solid $primary-color-light;
+      border-radius:8px ;
+      transition: border 0.1s ease-in-out;
+    }
+    li:last-child{
+      margin-bottom: 10px;
+    }
+    ul li:hover{
+      border: 2px solid $primary-color-light;
+      border-radius: 20px;
     }
     ul li a {
       color: white;
+      font-family: 'Roboto Mono' ,monospace;
+      font-size: $fs-8;
+      text-transform:uppercase;
     }
     .navigation.active {
       height: 450px;
+      z-index: 900;
     }
     .navigation.active ul {
       opacity: 1;
