@@ -1,70 +1,52 @@
-
 @mixin navbar {
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-  nav {
+  .nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 6em;
-    padding: .5rem 1rem;
-  }
-  .row {
-    display: flex;
-  }
-  .container {
-    max-width: 85%;
-    margin: 0px auto;
-  }
-  .logo {
-    align-items: center;
-    font-size: $fs-7;
-  }
-  .logo img {
-    max-width: 35px;
-  }
-  nav ul {
-    gap: 2em;
-    align-items: center;
-  }
-  nav a {
-    transition: 0.3s ease-in-out;
-  }
-  // end of navigation
-  
-  // mobile responsive
-  @media only screen and (max-width: 900px) {
-     // hamburger
+    padding: 0.5rem 1rem;
+
+    // branding/logo
+    .logo {
+      align-items: center;
+      font-size: $fs-7;
+      z-index: 1000;
+      color: $color-dark;
+      transition: color 0.5s ease-in-out;
+
+      .logo-img {
+        max-width: 35px;
+      }
+      .branding {
+        margin-right: 4px;
+        margin-top: -3px;
+        font-family: $font-brand;
+        color: #333;
+        font-weight: 800;
+        font-size: 22.4211px;
+        transition: color 0.8s ease-in-out;
+      }
+    }
+    .logo.active .branding {
+      color: rgb(218, 218, 218) !important;
+    }
+
+    // hamburger /toggle button for navigation bar
     .hamburger {
       display: block;
       cursor: pointer;
       z-index: 1000;
+
+      .line {
+        width: 25px;
+        height: 2px;
+        background-color: rgb(31, 148, 111);
+        margin: 3.6px 0px;
+        border-radius: 50px;
+      }
     }
-    .hamburger .line {
-      width: 25px;
-      height: 2px;
-      background-color: rgb(31, 148, 111);
-      margin: 3.6px 0px;
-      border-radius: 50px;
-    }
-    // logo branding
-    .logo {
-      z-index: 1000;
-      color: $color-dark;
-      transition: color 0.7s ease-in-out;
-    }
-    .logo h1{
-      margin-right:4px ;
-      margin-top: -3px;
-      font-family:'Montserrat', sans-serif;
-      color: #333;
-      font-weight: 800;
-      font-size: 22.4211px;
-      transition: color 0.8s ease-in-out;
-    }
-    .logo.active h1{
-      color: rgb(218, 218, 218) !important;
-    }
-    // navigation bar
+
+    // navigation / container for all links /cta's
     .navigation {
       position: absolute;
       height: 0px;
@@ -74,46 +56,53 @@
       width: 100vw;
       background-color: $color-primary;
       transition: height 0.4s ease-in-out;
-      border-bottom-left-radius: 25px; 
+      border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
+
+      .ul-tag {
+        gap: 2em;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        transition: 0.9s;
+        opacity: 0;
+
+        li {
+          display: inline-block;
+          margin-bottom: -5px;
+          transition: 0.9s;
+          text-align: center;
+          padding: 5px 15px;
+          border-bottom: 2px solid $primary-color-light;
+          border-radius: 8px;
+          transition: border 0.1s ease-in-out;
+        }
+        li:last-child {
+          margin-bottom: 10px;
+        }
+        li:hover {
+          border: 2px solid $primary-color-light;
+          border-radius: 20px;
+        }
+      }
+
+      .link {
+        transition: 0.3s ease-in-out;
+        color: white;
+        font-family: $font-mono;
+        font-size: $fs-8;
+        text-transform: uppercase;
+      }
     }
-    .navigation ul {
-      display: flex;
-      flex-direction: column;
-      width: fit-content;
-      margin: 80px auto 0 auto;
-      text-align: center;
-      transition: 0.9s;
-      opacity: 0;
-    }
-    ul li {
-      display: inline-block;
-      margin-bottom: -5px;
-      transition: 0.9s;
-      text-align: center;
-      padding: 5px 15px;
-      border-bottom:2px solid $primary-color-light;
-      border-radius:8px ;
-      transition: border 0.1s ease-in-out;
-    }
-    li:last-child{
-      margin-bottom: 10px;
-    }
-    ul li:hover{
-      border: 2px solid $primary-color-light;
-      border-radius: 20px;
-    }
-    ul li a {
-      color: white;
-      font-family: 'Roboto Mono' ,monospace;
-      font-size: $fs-8;
-      text-transform:uppercase;
-    }
+
     .navigation.active {
       height: 450px;
       z-index: 900;
     }
-    .navigation.active ul {
+    .navigation.active .ul-tag {
       opacity: 1;
     }
   }
