@@ -3,58 +3,104 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
         <!-- Favicon -->
         <link
             rel="shortcut icon"
-            href="/assets/favicon.png"
+            href="assets/favicon-img.png"
             type="image/x-icon" />
 
         <!-- CSS -->
-        <link rel="stylesheet" href="/src/css/default.css" />
-        <link rel="stylesheet" href="/src/css/index.css" />
-
-        <!-- JS -->
-        <script defer src="src/js/navbar.js"></script>
+        <link rel="stylesheet" href="src/css/default.css" />
+        <link rel="stylesheet" href="src/css/index.css" />
 
         <title>Home | Chromiro</title>
     </head>
     <body>
-        <!-- Landing Page -->
-        <header class="landing-page">
-            <!-- Navbar -->
-            <nav class="navbar">
-                <a href="/">
-                    <div class="logo">
-                        <img src="assets/favicon.png" alt="" />
+        <header class="header" id="header">
+            <nav class="container row nav">
+                <!-- branding -->
+                <a href="#" class="logo row">
+                    <h1 class="branding">Chromiro</h1>
+                    <div class="logo-img">
+                        <img src="assets/logo.png" alt="" />
                     </div>
                 </a>
 
-                <!-- ** Under development ** -->
-                <ul class="navigation">
-                    <li>
-                        <a href="#" class="nav-link active">Home</a>
-                    </li>
+                <!-- three lines also called hamburger (because of shape) -->
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
 
-                    <li>
-                        <a href="#" class="nav-link">Themes</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav-link">About us</a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="nav-link">Contact us</a>
-                    </li>
-                </ul>
-
-                <button class="nav-toggler" id="nav-tog-btn">
-                    <hr class="nav-row" />
-                    <hr class="nav-row" />
-                    <hr class="nav-row" />
-                </button>
+                <!-- navigation row with all cta's -->
+                <div class="navigation row">
+                    <ul class="ul-tag row">
+                        <li><a href="#header" class="link">Home</a></li>
+                        <li><a href="#" class="link">About</a></li>
+                        <li><a href="#" class="link">Reviews</a></li>
+                        <li>
+                            <a href="#categories" class="link">Categories</a>
+                        </li>
+                    </ul>
+                </div>
             </nav>
+            <!-- nav ends -->
+
+            <!-- hero starts -->
+            <section class="hero row container">
+                <div class="hero-content">
+                    <!-- hero main image -->
+                    <div class="hero-img-container">
+                        <img src="assets/hero-img.png" class="hero-img" />
+                    </div>
+
+                    <!--shine effect for desktop view only  -->
+                    <div class="shine">
+                        <img
+                            src="assets/shine-crp.png"
+                            alt=""
+                            class="shine-img" />
+                    </div>
+
+                    <!-- hero text -->
+                    <h1 class="hero-h1">
+                        <span class="green-text">Revamp</span> your Browsing.
+                    </h1>
+
+                    <p class="hero-dis">
+                        Immerse yourself in a world of creativity and innovation
+                        with our exceptional Chrome themes.
+                    </p>
+
+                    <!-- cta themes btn -->
+                    <div class="hero-btn">
+                        <a href="#">Themes <i class="arrow-icon right"></i></a>
+                    </div>
+
+                    <!-- arrow png  -->
+                    <div class="arrow">
+                        <img
+                            src="assets/arrow-crp.png"
+                            alt=""
+                            class="arrow-img" />
+                    </div>
+
+                    <!-- details box -->
+                    <div class="num-box">
+                        <div class="demo-img-container">
+                            <img src="assets/demo-theme.jpg" class="demo-img" />
+                        </div>
+                        <div class="text">
+                            <h1>2500+</h1>
+                            <p>Themes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- hero ends -->
         </header>
+
+        <script src="src/js/index.js"></script>
     </body>
 </html>

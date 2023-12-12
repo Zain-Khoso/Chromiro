@@ -1,26 +1,112 @@
+@import "utils";
 @import "config";
+@import "default";
 @import "navbar";
 
 body {
-    width: 100dvw;
-    height: 100dvh;
-    background-color: $color-light;
     overflow-y: auto;
+    width: 100vw;
+    height: 100dvh;
 
-    .landing-page {
-        position: relative;
+    .header {
+        @include navbar;
 
-        width: 100%;
-        height: 100%;
+        // hero section starts here
+        .hero {
+            text-align: center;
+            justify-content: center;
 
-        @include navbar();
-    }
-}
+            .hero-content {
+                align-items: center;
+                justify-content: center;
 
-@media screen and (min-width: $breakpoint-tablet) {
-    body {
-        .landing-page {
-            @include navbar-tablet();
+                .hero-img-container {
+                    display: block;
+                    margin-top: 15%;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 77%;
+                }
+                .shine {
+                    display: none;
+                }
+                .hero-h1 {
+                    font-size: $fs-3;
+                    line-height: 55px;
+                    font-weight: 700;
+                    color: #333;
+                    font-family: $font-minor;
+                }
+                .hero-h1 .green-text {
+                    color: #2f8986 !important;
+                    font-size: $fs-3;
+                    font-weight: 700;
+                    font-family: $font-minor;
+                }
+                .hero-dis {
+                    font-family: $font-condensed;
+                    font-weight: 500;
+                    font-size: $fs-7;
+                    line-height: 21px;
+                    text-align: center;
+                    margin-top: 16px;
+                }
+
+                // eg : themes button
+                .hero-btn {
+                    @include default-btn(#2f8986);
+                }
+                .hero-btn a {
+                    color: white;
+                    font-size: $fs-8;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    text-transform: uppercase;
+                    font-family: $font-mono;
+                }
+                .hero-btn:hover {
+                    background-color: #266b69;
+                }
+
+                // png arrow just for fun
+                .arrow {
+                    width: 30px;
+                    margin-top: -5px;
+                    margin-left: 70%;
+                    margin-bottom: 20px;
+                }
+                .num-box {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .demo-img-container {
+                        display: block;
+                        width: 13%;
+                        margin-top: 3px;
+                    }
+                    .demo-img {
+                        border-radius: 12px;
+                    }
+                    .text {
+                        margin-left: 7px;
+                        margin-top: -2px;
+                    }
+                    .text h1 {
+                        color: #2f8986;
+                        margin-top: -10px;
+                        font-size: $fs-7;
+                        line-height: 55px;
+                        font-weight: 700;
+                        font-family: $font-minor;
+                    }
+                    .text p {
+                        font-size: $fs-8;
+                        margin-top: -15px;
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
+    // header ends here
 }

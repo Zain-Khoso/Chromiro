@@ -1,103 +1,109 @@
 @mixin navbar {
-    .navbar {
-        position: absolute;
-        inset: 0;
+    .nav {
         display: flex;
+        align-items: center;
         justify-content: space-between;
-        align-items: center;
+        gap: 6em;
+        padding: 0.5rem 1rem;
 
-        width: 100dvw;
-        height: $navbar-height-sm;
-        padding: 0 0.5rem;
-
+        // branding/logo
         .logo {
-            width: 4rem;
-            aspect-ratio: 1/1;
+            align-items: center;
+            font-size: $fs-7;
+            z-index: 1000;
+            color: $color-dark;
+            transition: color 0.5s ease-in-out;
+
+            .logo-img {
+                max-width: 35px;
+            }
+            .branding {
+                margin-right: 4px;
+                margin-top: -3px;
+                font-family: $font-brand;
+                color: #333;
+                font-weight: 800;
+                font-size: 22.4211px;
+                transition: color 0.8s ease-in-out;
+            }
+        }
+        .logo.active .branding {
+            color: rgb(218, 218, 218) !important;
         }
 
+        // hamburger /toggle button for navigation bar
+        .hamburger {
+            display: block;
+            cursor: pointer;
+            z-index: 1000;
+
+            .line {
+                width: 25px;
+                height: 2px;
+                background-color: rgb(31, 148, 111);
+                margin: 3.6px 0px;
+                border-radius: 50px;
+            }
+        }
+
+        // navigation / container for all links /cta's
         .navigation {
-            display: none;
-        }
-    }
+            position: absolute;
+            height: 0px;
+            top: 0px;
+            left: 0;
+            right: 0;
+            width: 100vw;
+            background-color: $color-primary;
+            transition: height 0.4s ease-in-out;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
 
-    .nav-toggler {
-        position: relative;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-
-        width: 3rem;
-        aspect-ratio: 1/1;
-        transition: 0.4s ease-out;
-
-        .nav-row {
-            width: 80%;
-            height: 10%;
-            background: $color-dark;
-            border-radius: 0.5rem;
-            transform-origin: 50% 50%;
-            transition: all 300ms ease;
-        }
-
-        &:focus {
-            .nav-row {
-                position: absolute;
-                top: 50%;
-                scale: 80%;
-            }
-
-            .nav-row:nth-child(1) {
-                transform: rotate(45deg);
-            }
-
-            .nav-row:nth-child(2) {
-                scale: 0%;
+            .ul-tag {
+                gap: 2em;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                width: fit-content;
+                margin: 80px auto 0 auto;
+                text-align: center;
+                transition: 0.9s;
                 opacity: 0;
+
+                li {
+                    display: inline-block;
+                    margin-bottom: -5px;
+                    transition: 0.9s;
+                    text-align: center;
+                    padding: 5px 15px;
+                    border-bottom: 2px solid $primary-color-light;
+                    border-radius: 8px;
+                    transition: border 0.1s ease-in-out;
+                }
+                li:last-child {
+                    margin-bottom: 10px;
+                }
+                li:hover {
+                    border: 2px solid $primary-color-light;
+                    border-radius: 20px;
+                }
             }
 
-            .nav-row:nth-child(3) {
-                transform: rotate(135deg);
+            .link {
+                transition: 0.3s ease-in-out;
+                color: white;
+                font-family: $font-mono;
+                font-size: $fs-8;
+                text-transform: uppercase;
             }
         }
-    }
-}
 
-@mixin navbar-tablet {
-    .navbar {
-        padding: 0 2rem;
-
-        // **** NOT WORKING PROPERLY : : LEAVING THIS AS IS UNTIL THE OTHER NAV ARRIVES SO WE HAVE TO DO LESS WORK.
-
-        .navigation {
-            display: flex;
-            gap: 2rem;
-
-            //     li > .navlink {
-            //         font-size: $fs-6;
-
-            //         &::after {
-            //             content: "";
-            //             display: grid;
-            //             width: 0%;
-            //             height: 1px;
-            //             background: #000;
-            //             transition: 0.5s;
-            //         }
-
-            //         &:hover {
-            //             color: $color-dark;
-
-            //             &::after {
-            //                 width: 100%;
-            //             }
-            //         }
-            //     }
+        .navigation.active {
+            height: 450px;
+            z-index: 900;
         }
-    }
-
-    .nav-toggler {
-        display: none;
+        .navigation.active .ul-tag {
+            opacity: 1;
+        }
     }
 }

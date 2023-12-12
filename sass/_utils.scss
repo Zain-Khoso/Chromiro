@@ -1,0 +1,33 @@
+
+// for default button
+@mixin default-btn($background){
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 19px;
+    background-color: $background;
+    border-radius: 17px;
+    transition: 0.3s ease-in-out;
+    padding: 5px 11px;
+}
+
+// for arrow used in button 
+.arrow-icon {
+  border: solid #c7e5e4;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3.3px;
+}
+// to specify direction of arrow
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+// utility classes
+.row {
+  display: flex;
+}
+.container {
+  max-width: 85%;
+  margin: 0px auto;
+}
